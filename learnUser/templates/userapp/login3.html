@@ -1,0 +1,20 @@
+<html>
+<head></head>
+<body>
+{% block body__block %}
+<div class="jumbotron">
+    <h1>Login</h1>
+    <form actio="{% url 'userapp:user_login' %}" method="post">
+        {% csrf_token %}
+
+        <label for="username">username</label>
+        <input type="text" name="username" placeholder="Enter username">
+        <label for="pass">Password</label>
+        <input type="password" name="password" placeholder="Enter pass">
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+{% endblock %}
+</body>
+</html>
